@@ -1,0 +1,27 @@
+$mkdir dir//创建一个空目录
+
+$cd dir//进入创建的空目录
+
+$git init//将创建的目录变成Git可以管理的仓库
+
+$git add file//将文件添加到Git暂存区
+
+$git status//查看暂存区
+
+$git commit -m "some modified records"//将暂存区中的改动提交到仓库
+
+$git log//显示从最近到最远的提交记录
+	git log --pretty=oneline//git log的简约版本
+
+$git reset --hard HEAD^//回退到上一个版本；HEAD表示当前版本
+	git reset --hard commitid//回退到指定的版本
+	
+$git reflog//记录每一次命令
+
+$git diff HEAD -- filename//提交后，使用此命令查看工作区与版本库中最新版本的区别
+
+$git checkout -- file//撤销工作区的全部修改
+
+$git reset HEAD -- file//撤销暂存的修改
+
+$git rm file//删除文件
