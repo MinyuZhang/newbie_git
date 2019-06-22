@@ -1,3 +1,3 @@
-readme.txt
-
-readme2.txt
+As we all know, git is a version control system.
+Git is a free software distributed under the GPL.
+Git has a mutable index called stage.
