@@ -22,6 +22,6 @@ $git diff HEAD -- filename//提交后，使用此命令查看工作区与版本�
 
 $git checkout -- file//撤销工作区的全部修改
 
-$git reset HEAD -- file//撤销暂存的修改
+$git reset HEAD -- file//撤销暂存区，将暂存区的修改清除
 
 $git rm file//删除文件
