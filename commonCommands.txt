@@ -39,3 +39,9 @@ $git checkout <name>//切换分支
 $git merge <name>//将分支name合并至当前分支上
 
 $git branch -d <name>//删除分支name
+
+$git remote add origin https://github.com/repositoryPath//将本地仓库与远程仓库关联
+
+$git push -u origin master//用于首次推送分支，
+
+$git push origin master//将本地分支的最新修改推送到GitHub
