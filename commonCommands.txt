@@ -26,8 +26,16 @@ $git checkout -- file//撤销工作区的全部修改
 
 $git reset HEAD -- file//撤销暂存区，将暂存区的修改清除
 
-$git rm file//删除文件
+$git rm file//删除文件，该命令相当于：删除文件->git add
 
-$git branch//查看分支
+$git branch//查看分支，git会在当前分支前用“*”以示区分
 
 $git branch <name>//创建分支
+
+$git checkout -b <name>//创建并切换到目标分支
+
+$git checkout <name>//切换分支
+
+$git merge <name>//将分支name合并至当前分支上
+
+$git branch -d <name>//删除分支name
