@@ -1,3 +1,5 @@
+Hello Git.
+
 $mkdir dir//创建一个空目录
 
 $cd dir//进入创建的空目录
