@@ -27,3 +27,7 @@ $git checkout -- file//撤销工作区的全部修改
 $git reset HEAD -- file//撤销暂存区，将暂存区的修改清除
 
 $git rm file//删除文件
+
+$git branch//查看分支
+
+$git branch <name>//创建分支
