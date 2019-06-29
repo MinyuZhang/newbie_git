@@ -51,3 +51,13 @@ $git log --graph --pretty=oneline --abbrev-commit//用于查看分支的合并�
 $git push origin :<branch>//该命令用于删除远程仓库"origin"中的分支"branch"
 
 $git merge --no-ff -m "some descriptions" <branch>//合并分支时禁用Fast forward模式并创建新的commit，可用git log查看分支历史
+
+$git stash//将当前工作现场储藏起来
+
+$git stash list//用于查看存储的工作现场列表
+
+$git stash apply//恢复存储的工作现场，不删除stash内容|亦可恢复指定工作现场
+
+$git stash drop//删除stash内容，亦可删除指定工作现场
+
+$git stash pop//恢复工作现场并删除stash内容
