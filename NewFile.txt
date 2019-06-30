@@ -1,3 +1,4 @@
 This is a new branch.
 Creating a new branch is quick & simple.
 merge with --no-ff.
+The conflict here.
