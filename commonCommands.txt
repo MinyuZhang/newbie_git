@@ -69,3 +69,9 @@ $git remote -v//查看远程库的详细信息
 $git pull//将远程库中最新的提交抓下来并在本地合并
 
 $git branch --set-upstream-to=<remote host>/<remote branch> <local branch>//指定本地分支与远程分支的链接
+
+$git tag <tag_name>//打一个新标签
+
+$git tag//查看所有标签
+
+$git show <tagname>//查看指定标签信息
