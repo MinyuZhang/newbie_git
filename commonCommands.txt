@@ -75,3 +75,11 @@ $git tag <tag_name>//打一个新标签
 $git tag//查看所有标签
 
 $git show <tagname>//查看指定标签信息
+
+$git tag -d <tagname>//删除单个标签
+
+$git push origin <tagname>//推送单个标签至远程
+
+$git push origin --tags//一次性推送全部尚未推送至远程的本地标签
+
+$git push origin :refs/tags/<tagname>//删除远程标签
