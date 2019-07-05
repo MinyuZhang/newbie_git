@@ -83,3 +83,5 @@ $git push origin <tagname>//推送单个标签至远程
 $git push origin --tags//一次性推送全部尚未推送至远程的本地标签
 
 $git push origin :refs/tags/<tagname>//删除远程标签
+
+$git fetch origin tag <tagname>//获取指定的某一个版本
