@@ -1,6 +1,7 @@
-package cn.zmy.day09;
+﻿package cn.zmy.day09;
 
 /**
+ * Animal.java
  * 抽象动物类
  * @author zmy
  *
