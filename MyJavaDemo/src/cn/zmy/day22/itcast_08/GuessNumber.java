@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class GuessNumber {
 	private static Scanner sc;
-	private static final int random;
+	private static int random;
 	private static int guess;
 	static {
 		sc = new Scanner(System.in);
-		random = (int)Math.random()*10 + 1;// [1,10]
 		printMsg("Please enter a number");
 		guess = sc.nextInt();
 	}
@@ -16,6 +15,7 @@ public class GuessNumber {
 		System.out.println(str);
 	}
 	public static void start() {
+		random = (int)Math.random()*10 + 1;// [1,10]
 		while(true) {
 			if (random > guess) {
 				printMsg("it's a little small a number");

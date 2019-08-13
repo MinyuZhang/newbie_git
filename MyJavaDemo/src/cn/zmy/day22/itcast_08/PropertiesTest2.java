@@ -26,20 +26,8 @@ public class PropertiesTest2 {
 			prop.setProperty("count", "1");
 			Writer w = new FileWriter(file);
 			prop.store(w, null);
-			
-			String value = prop.getProperty("count");
-			int number = Integer.parseInt(value);
-			if (number > 5) {
-				System.out.println("试玩5次结束，请付费");
-				System.exit(0);
-			} else {
-				number++;
-				prop.setProperty("count", String.valueOf(number));
-				prop.store(w, null);
-				w.close();
 
-				GuessNumber.start();
-			}
+			GuessNumber.start();
 		} else {
 			Reader r = new FileReader(file);
 			prop.load(r);
@@ -48,7 +36,7 @@ public class PropertiesTest2 {
 			int number = Integer.parseInt(value);
 			
 			if (number > 5) {
-				System.out.println("试玩5次结束，请付费");
+				System.out.println("游戏试玩已结束，请付费");
 				System.exit(0);
 			} else {
 				number++;
