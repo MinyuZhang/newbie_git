@@ -275,7 +275,7 @@ public class ShootGame extends JPanel {
 	}
 	public void enterAction() {
 		// 每三百毫秒随机产生一个飞行物
-		if (enterIndex ++ % 40 == 0) {
+		if (enterIndex ++ % 30 == 0) {
 			flyings.add(nextOne());
 		}
 	}

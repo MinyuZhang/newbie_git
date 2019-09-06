@@ -76,12 +76,4 @@ public class Hero extends FlyingObject {
 	public boolean outOfBounds() {
 		return false;
 	}
-	public boolean isHit(FlyingObject obj) {
-		int x1 = obj.x - this.width/2;
-		int x2 = obj.x + obj.width + this.width/2;
-		int y1 = obj.y - this.height/2;
-		int y2 = obj.y + obj.height + this.height/2;
-		
-		return this.x > x1 && this.x < x2 && this.y > y1 && this.y < y2;
-	}
 }

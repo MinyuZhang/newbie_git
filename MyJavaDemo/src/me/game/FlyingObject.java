@@ -23,17 +23,12 @@ public abstract class FlyingObject {
 		return image;
 	}
 	// 判断飞行物是否相撞
-	public boolean isHit(FlyingObject f) {
-		int x = f.getX();
-		int y = f.getY();
-		int width = f.getWidth();
-		int height = f.getHeight();
-		
-		int x1 = this.getX();
-		int y1 = this.getY();
-		int width1 = this.getWidth();
-		int height1 = this.getHeight();
-		return x1 - width < x && x < x1 + width1 && y < y1 + height1 && y > y1 - height;
+	public boolean isHit(FlyingObject f) {//bullet.isHit(fly)
+		int x1 = f.getX() - this.getWidth();
+		int x2 = f.getX() + f.getWidth();
+		int y1 = f.getY() + f.getHeight();
+		int y2 = f.getY() - this.getHeight();
+		return this.x < x2 && this.x > x1 && this.y < y1 && this.y > y2;
 	}
 	
 	public int getX() {

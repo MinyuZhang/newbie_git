@@ -12,7 +12,7 @@ public class Bee extends FlyingObject implements Award {
 		this.y = -this.height;
 		this.image = ShootGame.bee;
 		this.ember = ShootGame.bee_ember;
-		this.awardType = (int)Math.random()*2;
+		this.awardType = (int)(Math.random()*2);
 	}
 	@Override
 	public int getType() {
@@ -36,6 +36,6 @@ public class Bee extends FlyingObject implements Award {
 	}
 	public static void main(String[] args) {
 //		System.out.println(new Bee().getImage().getWidth() + ":" + ShootGame.bee.getWidth() + ":" + ShootGame.WIDTH);
-		System.out.println(new Random().nextInt(ShootGame.WIDTH - ShootGame.bee.getWidth()));
+		System.out.println(new Bee().awardType);
 	}
 }
