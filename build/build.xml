@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="yui-compressor" basedir="." default="yui-compress">
+	<description>yui-compressor</description>
+	<property file="build.properties" />
+
+	<target name="init">
+		<echo message="${sayHi}"/>
+		<tstamp>
+			<format property="build.time" pattern="yyyy-MM-dd HH:mm"/>
+		</tstamp>
+
+		<delete dir="${deploy.dir}"/>
+		<mkdir dir="${deploy.js}"/>
+		<mkdir dir="${deploy.css}"/>
+	</target>
+
+	<target name="yui-compress" depends="init">
+		<echo message="compressing js....wait a moment"/>
+		<echo message="${src}"/>
+		<apply executable="java" parallel="false" dest="${deploy.js}" append="false" force="true">
+			<!--多个子目录压缩-->
+			 <!--单个文件压缩-->  
+			<fileset dir="${src}/" includes="**/*.js"/>
+			<arg line="-jar" />
+			<arg path="${yui_compressor}" />
+			<arg line="--charset utf-8" />
+			<arg line="-o" />
+			<targetfile  />
+			<srcfile />
+			<!--只压缩去掉空格，不混淆-->
+			<mapper type="glob" from="*.js" to="*.js" />
+		</apply>
+		<echo message="compress js finished"/>
+		
+		<echo message="compressing css...wait for a while" />
+		<apply executable="java" parallel="false" dest="${deploy.css}" append="false" force="true">
+			<!--多个子目录压缩-->
+			 <!--单个文件压缩-->  
+			<fileset dir="${src}/" includes="**/*.css"/>
+			<arg line="-jar" />
+			<arg path="${yui_compressor}" />
+			<arg line="--charset utf-8" />
+			<arg line="-o" />
+			<targetfile  />
+			<srcfile />
+			<mapper type="glob" from="*.css" to="*.css" />
+		</apply>
+		<echo message="finished" />
+	</target>
+
+</project>

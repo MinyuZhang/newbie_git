@@ -1,0 +1,1 @@
+(function(){alert("test for yui-compressor");function a(){console.log("本文件用于测试js压缩")}})();
